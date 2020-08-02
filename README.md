@@ -28,6 +28,8 @@ The analysis of the election shows that:
 	- Raymon Anthony Doane recieved 3.1% of the vote and 11,606 votes.
 - The winner of the election was:
 	- Diana DeGette who received 73.8% of the vote and 272,892 votes.
+- Below is an image of the results as they are printed out in the Python terminal:
+![Election Results](https://github.com/timbannock/election-analysis/blob/master/analysis/election-results.PNG)
 
 ## Election Audit Summary
 The python script used to analyze this election is flexible enough to work for nearly any election setup. It tallies votes by both county and candidate, and therefore can easily be utilized to break down election statistics, as well as ensure the accuracy of vote counts. Notably, the script is written in such a way that it is expandable to include virtually any number of candidates or counties without needing to be modified from its current form, making it useful country-wide.
