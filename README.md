@@ -33,3 +33,39 @@ The analysis of the election shows that:
 
 ## Election Audit Summary
 The python script used to analyze this election is flexible enough to work for nearly any election setup. It tallies votes by both county and candidate, and therefore can easily be utilized to break down election statistics, as well as ensure the accuracy of vote counts. Notably, the script is written in such a way that it is expandable to include virtually any number of candidates or counties without needing to be modified from its current form, making it useful country-wide.
+
+The below code shows how the script includes a 'generic' candidate and county references, allowing for election data from any region with any candidates can be referenced with the same code, as long as the data is input with the same basic structure.
+
+```
+# Add a variable to load a file from a path.
+file_to_load = os.path.join("Resources", "election_results.csv")
+# Add a variable to save the file to a path.
+file_to_save = os.path.join("analysis", "election_analysis.txt")
+
+# Initialize a total vote counter.
+total_votes = 0
+
+# Candidate Options list and candidate votes dictionary.
+candidate_options = []
+candidate_votes = {}
+
+# 1: Create a county list and county votes dictionary.
+counties = []
+county_votes = {}
+
+# Track the winning candidate, vote count and percentage
+winning_candidate = ""
+winning_count = 0
+winning_percentage = 0
+
+# 2: Track the largest county and county voter turnout.
+largest_county = ""
+largest_count = 0
+largest_percentage = 0
+```
+
+Below is the format for the data, which can then be read by the above script or organized into lists and dictionaries of candidate names, county information, and vote counts.
+
+```
+Ballot ID,County,Candidate
+```
