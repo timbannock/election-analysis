@@ -102,7 +102,7 @@ with open(file_to_save, "w") as txt_file:
         txt_file.write(county_results)
          # 6f: Write a decision statement to determine the winning county and get its vote count.
         if (votes > largest_count) and (vote_percentage > largest_percentage): # !Something in this line is causing the Winner/Winning Vote Count and Winning Percentage to get thrown out!
-            winning_count = votes
+            largest_count = votes
             largest_county = county_name
             largest_percentage = vote_percentage
     
